@@ -1,0 +1,154 @@
+/* Variables de Colores */
+:root {
+  --color-primary: #A22823;
+  --color-primary-dark: #d62828;
+  --color-secondary: #c24f4f;
+  --color-secondary-light: #f4a261;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-gray-light: #ececec;
+  --color-gray-dark: #333333;
+}
+
+/* Fuente y Estilos Generales */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  color: var(--color-black);
+  margin: 0;
+  padding: 0;
+}
+
+.b-white {
+  background-color: var(--color-white);
+}
+.space {
+  margin: 20%;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+.text-title {
+  color: var(--color-primary);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.divider-undecored {
+  margin: 3rem;
+}
+
+.decored-primary {
+  transform: rotate(-1deg); /* Rota el botón 10 grados hacia la izquierda */
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5); /* Añade una sombra hacia la parte inferior derecha */
+  color: var(--color-primary); /* Cambia el color del texto a rojo */
+  background-color: var(--color-white); /* Cambia el fondo a blanco */
+}
+
+#downloadCvBtn {
+  transform: rotate(-1.5deg); /* Rota el botón 10 grados hacia la izquierda */
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.5); /* Añade una sombra hacia la parte inferior derecha */
+  color: var(--color-primary); /* Cambia el color del texto a rojo */
+  background-color: var(--color-white); /* Cambia el fondo a blanco */
+  border: none; /* Elimina cualquier borde existente */
+  outline: 5px solid var(--color-primary); /* Añade un borde rojo de 2 píxeles */
+  outline-offset: -15px; /* Hace que el fondo sobresalga del borde */
+  font-weight: bold;
+  font-size: 30px;
+  width: 50%;
+}
+
+#btn-decored {
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.5); /* Añade una sombra hacia la parte inferior derecha */
+  color: var(--color-primary); /* Cambia el color del texto a rojo */
+  background-color: var(--color-white); /* Cambia el fondo a blanco */
+  border: none; /* Elimina cualquier borde existente */
+  outline: 3px solid var(--color-primary); /* Añade un borde rojo de 3 píxeles */
+  outline-offset: -10px; /* Hace que el fondo sobresalga del borde */
+  font-weight: bold;
+  padding: 10px; /* Ajusta el padding para darle una forma más ovalada */
+  height: 1px; /* Ajusta la altura para darle una forma más ovalada */
+  cursor: default; 
+}
+
+/* Fondo con Textura */
+.background-placeholder {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ececec;
+  background-image: url('..\\assets\\images\\background.png');
+  background-size: auto; /* Cambia el tamaño de la imagen para que se repita correctamente */
+  background-repeat: repeat; /* Hace que la imagen se repita en mosaico */
+  z-index: -2;
+}
+
+
+/* Esquina Superior Derecha */
+.top-right-decoration {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  background-color: var(--color-primary);
+  background-image: url('path_to_your_corner_image.png');
+  background-size: cover;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  z-index: -1;
+}
+
+.subtitle_one {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.subtitle_two {
+  margin: 0%;
+  font-size: 1.2rem;
+  line-height: .2;
+}
+
+/* Foto de Perfil Placeholder */
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  background-image: url('..\\assets\\images\\jorge.png');
+}
+
+/* Botón Personalizado */
+.custom-btn {
+  background-color: #e63946;
+  color: white;
+  border-radius: 30px;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.custom-btn:hover {
+  background-color: #d62828;
+}
+
+/* Responsive para Movil */
+@media (max-width: 768px) {
+  .profile-photo {
+    width: 150px;
+    height: 150px;
+  }
+  .top-right-decoration {
+    width: 100px;
+    height: 100px;
+  }
+}
