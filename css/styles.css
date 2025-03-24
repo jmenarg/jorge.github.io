@@ -1,7 +1,7 @@
 /* Variables de Colores */
 :root {
   --color-primary: #A22823;
-  --color-primary-dark: #d62828;
+  --color-primary-dark: #8a201d;
   --color-secondary: #c24f4f;
   --color-secondary-light: #f4a261;
   --color-white: #ffffff;
@@ -22,17 +22,20 @@ body {
 .b-white {
   background-color: var(--color-white);
 }
+
 .space {
   margin: 20%;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-weight: bold;
 }
 
 .text-title {
   color: var(--color-primary);
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
 }
 
@@ -47,36 +50,55 @@ p {
 }
 
 .decored-primary {
-  transform: rotate(-1deg); /* Rota el botón 10 grados hacia la izquierda */
-  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5); /* Añade una sombra hacia la parte inferior derecha */
-  color: var(--color-primary); /* Cambia el color del texto a rojo */
-  background-color: var(--color-white); /* Cambia el fondo a blanco */
+  transform: rotate(-1deg);
+  /* Rota el botón 10 grados hacia la izquierda */
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+  /* Añade una sombra hacia la parte inferior derecha */
+  color: var(--color-primary);
+  /* Cambia el color del texto a rojo */
+  background-color: var(--color-white);
+  /* Cambia el fondo a blanco */
 }
 
 #downloadCvBtn {
-  transform: rotate(-1.5deg); /* Rota el botón 10 grados hacia la izquierda */
-  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.5); /* Añade una sombra hacia la parte inferior derecha */
-  color: var(--color-primary); /* Cambia el color del texto a rojo */
-  background-color: var(--color-white); /* Cambia el fondo a blanco */
-  border: none; /* Elimina cualquier borde existente */
-  outline: 5px solid var(--color-primary); /* Añade un borde rojo de 2 píxeles */
-  outline-offset: -15px; /* Hace que el fondo sobresalga del borde */
+  transform: rotate(-1.5deg);
+  /* Rota el botón 10 grados hacia la izquierda */
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.5);
+  /* Añade una sombra hacia la parte inferior derecha */
+  color: var(--color-primary);
+  /* Cambia el color del texto a rojo */
+  background-color: var(--color-white);
+  /* Cambia el fondo a blanco */
+  border: none;
+  /* Elimina cualquier borde existente */
+  outline: 5px solid var(--color-primary);
+  /* Añade un borde rojo de 2 píxeles */
+  outline-offset: -15px;
+  /* Hace que el fondo sobresalga del borde */
   font-weight: bold;
   font-size: 30px;
   width: 50%;
 }
 
 #btn-decored {
-  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.5); /* Añade una sombra hacia la parte inferior derecha */
-  color: var(--color-primary); /* Cambia el color del texto a rojo */
-  background-color: var(--color-white); /* Cambia el fondo a blanco */
-  border: none; /* Elimina cualquier borde existente */
-  outline: 3px solid var(--color-primary); /* Añade un borde rojo de 3 píxeles */
-  outline-offset: -10px; /* Hace que el fondo sobresalga del borde */
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.5);
+  /* Añade una sombra hacia la parte inferior derecha */
+  color: var(--color-primary);
+  /* Cambia el color del texto a rojo */
+  background-color: var(--color-white);
+  /* Cambia el fondo a blanco */
+  border: none;
+  /* Elimina cualquier borde existente */
+  outline: 3px solid var(--color-primary);
+  /* Añade un borde rojo de 3 píxeles */
+  outline-offset: -10px;
+  /* Hace que el fondo sobresalga del borde */
   font-weight: bold;
-  padding: 10px; /* Ajusta el padding para darle una forma más ovalada */
-  height: 1px; /* Ajusta la altura para darle una forma más ovalada */
-  cursor: default; 
+  padding: 10px;
+  /* Ajusta el padding para darle una forma más ovalada */
+  height: 1px;
+  /* Ajusta la altura para darle una forma más ovalada */
+  cursor: default;
 }
 
 /* Fondo con Textura */
@@ -88,42 +110,11 @@ p {
   height: 100vh;
   background-color: #ececec;
   background-image: url('..\\assets\\images\\background.png');
-  background-size: auto; /* Cambia el tamaño de la imagen para que se repita correctamente */
-  background-repeat: repeat; /* Hace que la imagen se repita en mosaico */
+  background-size: auto;
+  /* Cambia el tamaño de la imagen para que se repita correctamente */
+  background-repeat: repeat;
+  /* Hace que la imagen se repita en mosaico */
   z-index: -2;
-}
-
-
-/* Esquina Superior Derecha */
-.top-right-decoration {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 150px;
-  height: 150px;
-  background-color: var(--color-primary);
-  background-image: url('path_to_your_corner_image.png');
-  background-size: cover;
-  clip-path: polygon(100% 0, 100% 100%, 0 100%);
-  z-index: -1;
-}
-
-.subtitle_one {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.subtitle_two {
-  margin: 0%;
-  font-size: 1.2rem;
-  line-height: .2;
-}
-
-/* Foto de Perfil Placeholder */
-.profile-photo {
-  width: 100%;
-  height: 100%;
-  background-image: url('..\\assets\\images\\jorge.png');
 }
 
 /* Botón Personalizado */
@@ -141,14 +132,115 @@ p {
   background-color: #d62828;
 }
 
+/* Esquina Superior Derecha */
+.top-right-decoration {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25%;
+  height: 35%;
+  background-image: url('..\\assets\\images\\banner.png');
+  background-size: cover;
+  z-index: -1;
+  margin-top: -2px;
+}
+
+.subtitle_one {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.subtitle_two {
+  margin: 0%;
+  font-size: 1.2rem;
+}
+
+/* Foto de Perfil Placeholder */
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  background-image: url('..\\assets\\images\\jorge.png');
+}
+
+.portfolio-container .col-md-6 {
+  transition: all 0.3s ease;
+}
+
+.portfolio-container img {
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.filter-btn.active {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* Estilos para el selector de idioma */
+#languageSelector {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+}
+
+.col1-mywork {
+  transform: translateY(0px);
+}
+
+.col2-mywork {
+  transform: translateY(30px);
+}
+
 /* Responsive para Movil */
 @media (max-width: 768px) {
   .profile-photo {
     width: 150px;
     height: 150px;
   }
+
   .top-right-decoration {
     width: 100px;
     height: 100px;
+  }
+
+  .col1-mywork {
+    transform: translateY(30px);
+  }
+
+  .col2-mywork {
+    transform: translateY(30px);
+  }
+
+  #downloadCvBtn {
+    /* Añade un borde rojo de 4 píxeles */
+    outline: 4px solid var(--color-primary);
+    /* Hace que el fondo sobresalga del borde */
+    outline-offset: -10px;
+    font-weight: bold;
+    font-size: 1rem;
+    width: 80%;
+  }
+
+  .mw-mobile {
+    margin-bottom: .7rem;
+  }
+
+  .underline-red {
+    width: 85%;
+  }
+
+  .top-right-decoration {
+    width: 50%;
+    height: 20%;
+  }
+
+  .mobile-space {
+    margin: 20%;
   }
 }

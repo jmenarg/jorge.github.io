@@ -1,124 +1,167 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio - Jorge Méndez</title>
-
+  <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon" />
   <!-- Bootstrap 5 CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" crossorigin="anonymous">
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    crossorigin="anonymous">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
-
+  <!-- Lightbox2 CSS (CDN) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" />
   <!-- Custom CSS -->
-  <link rel="stylesheet" href=".\css\styles.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
 </head>
+
 <body>
+  <!-- Selector de Idioma -->
+  <select id="languageSelector">
+    <option value="en">🇺🇸</option>
+    <option value="es">🇲🇽</option>
+  </select>
+
   <!-- Fondo y decoraciones -->
   <div class="background-placeholder"></div>
   <div class="top-right-decoration"></div>
-
   <!-- Contenedor principal centrado y limitado -->
   <div class="container py-5" style="max-width: 900px;">
-
+    <div class="mobile-space"></div>
     <!-- Header -->
     <div class="mb-5">
-      <h1>Portfolio</h1>
-      <h2 class="text-title fw-bold">Jorge Méndez</h2>
-      <p class="subtitle_one text-end"><strong>Graphic Designer</strong><br/></p>
-      <p class="subtitle_two text-end">Branding, Editorial &amp; Packaging Specialist</p>
+      <h1 data-i18n="header_title">Portfolio</h1>
+      <img src=".\assets\images\name.svg" alt="Jorge Méndez" width="100%">
+      <p class="subtitle_one text-end" data-i18n="header_subtitle"><strong>Graphic Designer</strong><br /></p>
+      <p class="subtitle_two text-end" data-i18n="header_subsubtitle">Branding, Editorial &amp; Packaging Specialist</p>
       <div class="text-end" style="margin-top: 10px;">
-        <button id="btn-decored" class="btn btn-lg custom-btn" style="width: 45%;"></button>
+        <img class="text-end underline-red" src=".\assets\images\underline-red.png" alt="underline-red" width="50%" style="margin-right: -10px;">
       </div>
     </div>
-
     <div class="space"></div>
-
     <!-- About Me -->
     <div class="row align-items-center mb-5">
       <div class="col-md-6">
-        <h3 class="text-title">About me</h3>
-        <p>
-          I am <strong>Jorge Alberto Méndez Argueta</strong>, a senior graphic designer, account executive background with <strong>over 10 years of experience</strong> in creating
-          innovative and strategic visual solutions. My expertise spans branding, packaging, editorial design, illustration, and more. Ihave worked on visual identity concepts, packaging, marketing strategies, and advertising campaigns, creating compelling and effective content for international brands such as <strong>Nestlé</strong>, <strong>Michelin</strong>, and <strong>D’Gari</strong>.
+        <h2 class="text-title" data-i18n="about_title">About me</h2>
+        <p data-i18n="about_text">
+          I am <strong>Jorge Alberto Méndez Argueta</strong>, a senior graphic designer, account executive background
+          with <strong>over 10 years of experience</strong> in creating
+          innovative and strategic visual solutions. My expertise spans branding, packaging, editorial design,
+          illustration, and more. I have worked on visual identity concepts, packaging, marketing strategies, and
+          advertising campaigns, creating compelling and effective content for international brands such as
+          <strong>Nestlé</strong>, <strong>Michelin</strong>, and <strong>D’Gari</strong>.
         </p>
       </div>
       <div class="col-md-6 d-flex justify-content-center">
-        <img src=".\\assets\\images\\jorge-sinfondo.png" width="100%"></img>
+        <img src="./assets/images/jorge.png" width="100%" alt="Jorge Méndez">
       </div>
     </div>
-
     <!-- Achievements y Philosophy -->
     <div class="row mb-5">
       <div class="col-md-6">
-        <h3 class="text-title">My Achievements</h3>
-        <p style="margin-right: 2em;">
-            Created brand identities, packaging and publicity campaigns for global brands like Nestléand Michelin.</br>
-            Led editorial and multimedia projects for international publications.</br>
-            Delivered digital marketing campaigns that enhanced online engagement.
+        <h3 class="text-title" data-i18n="achievements_title">My Achievements</h3>
+        <p style="margin-right: 2em;" data-i18n="achievements_text">
+          Created brand identities, packaging and publicity campaigns for global brands like Nestlé and Michelin.</br>
+          Led editorial and multimedia projects for international publications.</br>
+          Delivered digital marketing campaigns that enhanced online engagement.
         </p>
       </div>
       <div class="col-md-6">
-        <h3 class="text-title">Work Philosophy</h3>
-        <p>
-            I believe in user-centered design, focusing on understanding client needs to create impactful visual solutions through research, conceptualization, and meticulous execution.
+        <h3 class="text-title" data-i18n="philosophy_title">Work Philosophy</h3>
+        <p data-i18n="philosophy_text">
+          I believe in user-centered design, focusing on understanding client needs to create impactful visual solutions
+          through research, conceptualization, and meticulous execution.
         </p>
       </div>
     </div>
-
     <!-- Call to Action -->
     <div class="text-center">
-      <h3 class="text-center">Let's create something amazing together!</h3>
-      <h4 class="text-center"> <strong>Explore my portfolio, and reach out to discuss your next project.</strong> </h4>
+      <h3 class="text-center" data-i18n="cta_title">Let's create something amazing together!</h3>
+      <h6 class="text-center">
+        <strong data-i18n="cta_subtitle">Explore my portfolio, and reach out to discuss your next project.</strong>
+      </h6>
       <div class="divider-undecored"></div>
-      <button id="downloadCvBtn" class="btn btn-danger btn-lg custom-btn decored-primary">Download my CV here!</button>
+      <button id="downloadCvBtn" class="btn btn-danger btn-lg custom-btn decored-primary" data-i18n="cta_button">
+        Download my CV here!
+      </button>
     </div>
-
     <div class="divider-undecored"></div>
     <!-- My Work Section -->
-   <div class="mb-5">
-    <h3 class="text-title">My Work</h3>
-    <div class="mb-3">
-      <button class="btn btn-primary btn-sm">ALL</button>
-      <button class="btn btn-outline-secondary btn-sm b-white">DISEÑO DE LOGOTIPO</button>
-      <button class="btn btn-outline-secondary btn-sm b-white">PÁGINAS WEB</button>
-      <button class="btn btn-outline-secondary btn-sm b-white">IDENTIDAD CORPORATIVA</button>
-      <button class="btn btn-outline-secondary btn-sm b-white">ARTÍCULOS PROMOCIONALES</button>
-      <button class="btn btn-outline-secondary btn-sm b-white">EVENTOS Y BTL</button>
-    </div>
-    <div class="row g-4">
-      <div class="col-md-6" style="transform: translateY(0px);">
-        <img src=".\assets\images\work1.png" class="img-fluid" alt="S-PORTLIFE" />
+    <div class="mb-5">
+      <h3 class="text-title" data-i18n="work_title">My Work</h3>
+      <!-- Botones de filtro -->
+      <div class="mb-3">
+        <button class="btn  btn-sm b-white filter-btn active mw-mobile" data-filter="all" data-i18n="mywork_button_1">ALL</button>
+        <button class="btn  btn-sm b-white filter-btn mw-mobile" data-filter="logotipo" data-i18n="mywork_button_2">
+          DISEÑO DE LOGOTIPO
+        </button>
+        <button class="btn  btn-sm b-white filter-btn mw-mobile" data-filter="web" data-i18n="mywork_button_3">
+          PÁGINAS WEB
+        </button>
+        <button class="btn  btn-sm b-white filter-btn mw-mobile" data-filter="identidad" data-i18n="mywork_button_4">
+          IDENTIDAD CORPORATIVA
+        </button>
+        <button class="btn  btn-sm b-white filter-btn mw-mobile" data-filter="promocionales" data-i18n="mywork_button_5">
+          ARTÍCULOS PROMOCIONALES
+        </button>
+        <button class="btn  btn-sm b-white filter-btn mw-mobile" data-filter="eventos" data-i18n="mywork_button_6">
+          EVENTOS Y BTL
+        </button>
       </div>
-      <div class="col-md-6" style="transform: translateY(30px);">
-        <img src=".\assets\images\work2.png" class="img-fluid" alt="El Chínguere" />
-      </div>
-      <div class="col-md-6" style="transform: translateY(0px);">
-        <img src=".\assets\images\work3.png" class="img-fluid" alt="Querétaro Networking" />
-      </div>
-      <div class="col-md-6" style="transform: translateY(30px);">
-        <img src=".\assets\images\work4.png" class="img-fluid" alt="Real Market" />
-      </div>
-      <div class="col-md-6" style="transform: translateY(0px);">
-        <img src=".\assets\images\work5.png" class="img-fluid" alt="Magazine" />
-      </div>
-      <div class="col-md-6" style="transform: translateY(30px);">
-        <img src=".\assets\images\work6.png" class="img-fluid" alt="Magazine" />
-      </div>
-      <div class="col-md-6" style="transform: translateY(0px);">
-        <img src=".\assets\images\work7.png" class="img-fluid" alt="Coaching" />
-      </div>
-      <div class="col-md-6" style="transform: translateY(30px);">
-        <img src=".\assets\images\work8.png" class="img-fluid" alt="Sanllas" />
+      <!-- Contenedor de imágenes (portafolio) -->
+      <div class="row g-4 portfolio-container">
+        <div class="col-md-6 col1-mywork" data-cat="logotipo">
+          <a href="./assets/images/work1.png" data-lightbox="portfolio" data-title="S-PORTLIFE">
+            <img src="./assets/images/work1.png" class="img-fluid" alt="S-PORTLIFE" />
+          </a>
+        </div>
+        <div class="col-md-6 col2-mywork" data-cat="logotipo">
+          <a href="./assets/images/work2.png" data-lightbox="portfolio" data-title="El Chínguere">
+            <img src="./assets/images/work2.png" class="img-fluid" alt="El Chínguere" />
+          </a>
+        </div>
+        <div class="col-md-6 col1-mywork" data-cat="web">
+          <a href="./assets/images/work3.png" data-lightbox="portfolio" data-title="Querétaro Networking">
+            <img src="./assets/images/work3.png" class="img-fluid" alt="Querétaro Networking" />
+          </a>
+        </div>
+        <div class="col-md-6 col2-mywork" data-cat="web">
+          <a href="./assets/images/work4.png" data-lightbox="portfolio" data-title="Real Market">
+            <img src="./assets/images/work4.png" class="img-fluid" alt="Real Market" />
+          </a>
+        </div>
+        <div class="col-md-6 col1-mywork" data-cat="identidad">
+          <a href="./assets/images/work5.png" data-lightbox="portfolio" data-title="Magazine">
+            <img src="./assets/images/work5.png" class="img-fluid" alt="Magazine" />
+          </a>
+        </div>
+        <div class="col-md-6 col2-mywork" data-cat="promocionales">
+          <a href="./assets/images/work6.png" data-lightbox="portfolio" data-title="Magazine 2">
+            <img src="./assets/images/work6.png" class="img-fluid" alt="Magazine" />
+          </a>
+        </div>
+        <div class="col-md-6 col1-mywork" data-cat="eventos">
+          <a href="./assets/images/work7.png" data-lightbox="portfolio" data-title="Coaching">
+            <img src="./assets/images/work7.png" class="img-fluid" alt="Coaching" />
+          </a>
+        </div>
+        <div class="col-md-6 col2-mywork" data-cat="eventos">
+          <a href="./assets/images/work8.png" data-lightbox="portfolio" data-title="Sanllas">
+            <img src="./assets/images/work8.png" class="img-fluid" alt="Sanllas" />
+          </a>
+        </div>
       </div>
     </div>
   </div>
-  
-  </div>
-
   <!-- Bootstrap 5 JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-  <script src=".\js\script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"></script>
+  <!-- Lightbox2 JS (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox-plus-jquery.min.js"></script>
+  <!-- Script de funcionalidades (filtrado y cambio de idioma) -->
+  <script src="./js/script.js"></script>
 </body>
+
 </html>
