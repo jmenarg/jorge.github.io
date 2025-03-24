@@ -9,20 +9,33 @@
   <!-- Bootstrap 5 CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
     crossorigin="anonymous">
+  <!-- Bootstrap Select CSS -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/css/bootstrap-select.min.css"
+    integrity="sha512-mR/b5Y7FRsKqrYZou7uysnOdCIJib/7r5QeJMFvLNHNhtye3xJp1TdJVPLtetkukFn227nKpXD9OjUc09lx97Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
   <!-- Lightbox2 CSS (CDN) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" />
+
   <!-- Custom CSS -->
   <link rel="stylesheet" href="./css/styles.css" />
 </head>
 
 <body>
   <!-- Selector de Idioma -->
-  <select id="languageSelector">
-    <option value="en">🇺🇸</option>
-    <option value="es">🇲🇽</option>
+  <select id="languageSelector" class="selectpicker" data-width="fit">
+    <option value="en"
+      data-content="<span><img src='./assets/images/us.png' style='width:20px; height:auto; margin-right:5px;'/></span>">
+    </option>
+    <option value="es"
+      data-content="<span><img src='./assets/images/mx.png' style='width:20px; height:auto; margin-right:5px;'/></span>">
+    </option>
   </select>
+
+
 
   <!-- Fondo y decoraciones -->
   <div class="background-placeholder"></div>
@@ -37,7 +50,8 @@
       <p class="subtitle_one text-end" data-i18n="header_subtitle"><strong>Graphic Designer</strong><br /></p>
       <p class="subtitle_two text-end" data-i18n="header_subsubtitle">Branding, Editorial &amp; Packaging Specialist</p>
       <div class="text-end" style="margin-top: 10px;">
-        <img class="text-end underline-red" src=".\assets\images\underline-red.png" alt="underline-red" width="50%" style="margin-right: -10px;">
+        <img class="text-end underline-red" src=".\assets\images\underline-red.png" alt="underline-red" width="50%"
+          style="margin-right: -10px;">
       </div>
     </div>
     <div class="space"></div>
@@ -93,7 +107,8 @@
       <h3 class="text-title" data-i18n="work_title">My Work</h3>
       <!-- Botones de filtro -->
       <div class="mb-3">
-        <button class="btn  btn-sm b-white filter-btn active mw-mobile" data-filter="all" data-i18n="mywork_button_1">ALL</button>
+        <button class="btn  btn-sm b-white filter-btn active mw-mobile" data-filter="all"
+          data-i18n="mywork_button_1">ALL</button>
         <button class="btn  btn-sm b-white filter-btn mw-mobile" data-filter="logotipo" data-i18n="mywork_button_2">
           DISEÑO DE LOGOTIPO
         </button>
@@ -103,7 +118,8 @@
         <button class="btn  btn-sm b-white filter-btn mw-mobile" data-filter="identidad" data-i18n="mywork_button_4">
           IDENTIDAD CORPORATIVA
         </button>
-        <button class="btn  btn-sm b-white filter-btn mw-mobile" data-filter="promocionales" data-i18n="mywork_button_5">
+        <button class="btn  btn-sm b-white filter-btn mw-mobile" data-filter="promocionales"
+          data-i18n="mywork_button_5">
           ARTÍCULOS PROMOCIONALES
         </button>
         <button class="btn  btn-sm b-white filter-btn mw-mobile" data-filter="eventos" data-i18n="mywork_button_6">
@@ -158,6 +174,14 @@
   <!-- Bootstrap 5 JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     crossorigin="anonymous"></script>
+  <!-- jQuery (requerido por Bootstrap Select) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- Bootstrap Select JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/js/bootstrap-select.min.js"
+    integrity="sha512-FHZVRMUW9FsXobt+ONiix6Z0tIkxvQfxtCSirkKc5Sb4TKHmqq1dZa8DphF0XqKb3ldLu/wgMa8mT6uXiLlRlw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- Lightbox2 JS (CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox-plus-jquery.min.js"></script>
   <!-- Script de funcionalidades (filtrado y cambio de idioma) -->

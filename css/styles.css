@@ -2,6 +2,7 @@
 :root {
   --color-primary: #A22823;
   --color-primary-dark: #8a201d;
+  --color-primary-light: #a3413d;
   --color-secondary: #c24f4f;
   --color-secondary-light: #f4a261;
   --color-white: #ffffff;
@@ -117,6 +118,15 @@ p {
   z-index: -2;
 }
 
+/* Efecto active: invierte colores y reduce tamaño */
+#downloadCvBtn:active,
+.custom-btn:active {
+  transform: scale(0.95) rotate(-1.5deg);
+  background-color: var(--color-white) !important;
+  color: var(--color-primary) !important;
+  box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.3);
+}
+
 /* Botón Personalizado */
 .custom-btn {
   background-color: #e63946;
@@ -125,7 +135,8 @@ p {
   padding: 12px 30px;
   font-size: 1.2rem;
   border: none;
-  transition: background-color 0.3s ease;
+  transition: all 0.2s ease;
+  /* Transición para cambios */
 }
 
 .custom-btn:hover {
@@ -178,15 +189,26 @@ p {
 }
 
 /* Estilos para el selector de idioma */
-#languageSelector {
+.bootstrap-select {
   position: fixed;
   top: 10px;
   right: 10px;
   z-index: 1000;
-  background: transparent;
-  border: none;
-  outline: none;
-  font-size: 1.5rem;
+  background-color: transparent;
+}
+
+/* Cambiar color del hover del select */
+.bootstrap-select .dropdown-menu .dropdown-item:hover,
+.bootstrap-select .dropdown-menu .dropdown-item:focus {
+  background-color: var(--color-primary-light); /* Cambia por el color que prefieras */
+  color: var(--color-white); /* Asegura un buen contraste */
+}
+
+/* Cambiar color de la opción activa */
+.bootstrap-select .dropdown-menu .dropdown-item.active,
+.bootstrap-select .dropdown-menu .dropdown-item.active:hover {
+  background-color: var(--color-primary-dark); /* Color personalizado para opción activa */
+  color: var(--color-white); /* Color del texto */
 }
 
 .col1-mywork {
